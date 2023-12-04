@@ -1,0 +1,270 @@
+<p>utilisateur works!</p>
+<!--
+<div class="container">
+    <mat-card class="mat-elevation-z8">
+      <mat-toolbar color="accent" style="box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);">
+        <div align="center" style="text-align: right;">CHATBOT  
+        </div>
+      </mat-toolbar>
+      <br><br>
+      <mat-card-content>
+        <form [formGroup]="utilisateurform" (ngSubmit)="onFormSubmit()">
+          <table>
+            <tr>
+              <td class="tbl1">
+                <mat-form-field class="demo-full-width">
+                  <input formControlName="firstname" matTooltip="Enter Employee Firstname" matInput placeholder="Firstname" autocomplete="off">           
+                </mat-form-field>
+                <mat-error>
+                  <span *ngIf="!utilisateurform.get('firstname').value && utilisateurform.get('firstname').touched"></span>
+                </mat-error>
+              </td>
+              <td class="tbl1">
+                <mat-form-field class="demo-full-width">
+                  <input formControlName="Lastname" matInput placeholder="Lastname" autocomplete="off">
+                </mat-form-field>
+                <mat-error>
+                  <span *ngIf="!utilisateurform.get('lastname').value && utilisateurform.get('Lastname').touched"></span>
+                </mat-error>
+              </td>
+              <td class="tbl1">
+                <mat-form-field class="demo-full-width">
+                  <input  formControlName="Age" placeholder="Age" autocomplete="off">
+                </mat-form-field>
+                <mat-error>
+                  <span *ngIf="!utilisateurform.get('Age').value && utilisateurform.get('Age').touched"></span>
+                </mat-error>
+              </td>
+              <td class="tbl1">
+                <mat-form-field class="demo-full-width">
+                  <input formControlName="EmailId" matInput placeholder="Email ID" autocomplete="off">
+                </mat-form-field>
+                <mat-error>
+                  <span *ngIf="!utilisateurform.get('EmailId').value && utilisateurform.get('EmailId').touched"></span>
+                </mat-error>
+              </td>
+              <td class="tbl1">
+                <mat-form-field class="demo-full-width">
+                  <input formControlName="Password" matInput placeholder="Password" autocomplete="off">
+                </mat-form-field>
+                <mat-error>
+                  <span *ngIf="!utilisateurform.get('Password').value && utilisateurform.get('Password').touched"></span>
+                </mat-error>
+              </td>
+            </tr>
+            <tr>
+              <td class="tbl1">
+                <mat-form-field class="demo-full-width">
+                  <input formControlName="Address" matInput placeholder="Address" autocomplete="off">
+                </mat-form-field>
+                <mat-error>
+                  <span *ngIf="!utilisateurform.get('Address').value && utilisateurform.get('Address').touched"></span>
+                </mat-error>
+              </td>
+              <td class="tbl1">
+                <mat-form-field class="demo-full-width">
+                  <input formControlName="Phone" matInput placeholder="Phone" autocomplete="off">
+                </mat-form-field>
+                <mat-error>
+                  <span *ngIf="!utilisateurform.get('Phone').value && utilisateurform.get('Phone').touched"></span>
+                </mat-error>
+              </td>
+              <td class="tbl1">
+                <mat-form-field class="demo-full-width">
+                  <input matInput placeholder="Usercode" minLength="5" maxLength="6" autocomplete="off">
+                </mat-form-field>
+                <mat-error>
+                  <span *ngIf="!utilisateurform.get('Usercode').value && utilisateurform.get('Usercode').touched"></span>
+                </mat-error>
+              </td>
+            </tr>
+            <tr>
+              <td class="content-center">
+                <button mat-icon-button type="submit" mat-raised-button color="accent" matTooltip="Submit" [disabled]="!utilisateurform.valid">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button mat-icon-button type="reset" mat-raised-button color="accent" matTooltip="Reset" (click)="resetForm()">Reset</button>
+              </td>
+              <td>
+                <p *ngIf="dataSaved" style="color:rgb(0, 128, 0);font-size:20px;font-weight:bold" Class="success" align="left">
+                  {{massage}}
+                </p>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+          <br><br>      
+           
+            <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>
+            -->
+            <!-- 
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button mat-icon-button aria-label="Example icon button with a delete icon" type="button" mat-raised-button color="accent" matTooltip="Delete" (click)="DeleteData()"><mat-icon>delete</mat-icon></button>
+          <div>
+            <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" style="box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);">
+
+
+              
+                <ng-container matColumnDef="select">
+                <mat-header-cell *matHeaderCellDef>
+                  <mat-checkbox (change)="$event ? masterToggle() : null"
+                                [checked]="selection.hasValue() && isAllSelected()"
+                                [indeterminate]="selection.hasValue() && !isAllSelected()"></mat-checkbox>
+                </mat-header-cell>
+                <mat-cell *matCellDef="let row">
+                  <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                                [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)"></mat-checkbox>
+                </mat-cell>
+              </ng-container>
+               
+              <ng-container matColumnDef="Firstname">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> FirstName </mat-header-cell>
+                <mat-cell *matCellDef="let utilisateur"> {{utilisateur.Firstname}} </mat-cell>
+              </ng-container>
+   
+              <ng-container matColumnDef="Lastname">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> LastName </mat-header-cell>
+                <mat-cell *matCellDef="let utilisateur"> {{utilisateur.Lastname}} </mat-cell>
+              </ng-container>
+   
+              <ng-container matColumnDef="Age">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Age </mat-header-cell>
+                <mat-cell *matCellDef="let utilisateur"> {{utilisateur.Age}}</mat-cell>
+              </ng-container>
+   
+              <ng-container matColumnDef="EmailId">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> EmailId </mat-header-cell>
+                <mat-cell *matCellDef="let utilisateur"> {{utilisateur.EmailId}}        </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="Password">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Password </mat-header-cell>
+                <mat-cell *matCellDef="let utilisateur"> {{utilisateur.Password}}        </mat-cell>
+              </ng-container>
+   
+              <ng-container matColumnDef="Address">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Address </mat-header-cell>
+                <mat-cell *matCellDef="let utilisateur"> {{utilisateur.Address}} </mat-cell>
+              </ng-container>
+
+              
+   
+              <ng-container matColumnDef="UserCode">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Usercode </mat-header-cell>
+                <mat-cell *matCellDef="let utilisateur"> {{utilisateur.Usercode}} </mat-cell>
+              </ng-container>
+   
+              <ng-container matColumnDef="Edit">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Edit </mat-header-cell>
+   
+                <mat-cell *matCellDef="let utilisateur">
+                  <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" type="button" mat-raised-button color="accent" matTooltip="Edit" (click)="loadUtilisateurToEdit(utilisateur.UserId)"><mat-icon>edit</mat-icon></button>
+                </mat-cell>
+              </ng-container>
+   
+              <ng-container matColumnDef="Delete">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Delete </mat-header-cell>
+                <mat-cell *matCellDef="let utilisateur"> <button mat-icon-button aria-label="Example icon button with a delete icon" type="button" mat-raised-button color="accent" matTooltip="Delete" (click)="deleteUtilisateur(utilisateur.UserId)"><mat-icon>delete_forever</mat-icon></button></mat-cell>
+              </ng-container>
+   
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+   
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  -->
+  <h1>Liste des Utilisateurs</h1>
+
+<!-- Affichage de la liste des utilisateurs -->
+<div class="container">
+  <mat-card class="mat-elevation-z8">
+    <mat-toolbar color="accent" style="box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);">
+      <div align="center" style="text-align: right;">CHATBOT  
+      </div>
+    </mat-toolbar>
+    <br><br>
+    <mat-card-content>
+      <form (ngSubmit)="createUtilisateur()">
+        <table>
+          <thead>
+            <tr>
+              <th>code_utilisateur</th>
+              <th>Prénom</th>
+              <th>Nom</th>
+              <th>age</th>
+              <th>adress_user</th>
+              <th>phone</th>
+              <th>Email</th>
+              <th>password</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let utilisateur of utilisateurs">
+              <td>{{ utilisateur.usercode }}</td>
+              <td>{{ utilisateur.firstname }}</td>
+              <td>{{ utilisateur.lastname }}</td>
+              <td>{{ utilisateur.age }}</td>
+              <td>{{ utilisateur.adressUser }}</td>
+              <td>{{ utilisateur.phone }}</td>
+              <td>{{ utilisateur.emailUser }}</td>
+              <td>{{ utilisateur.password  }}</td>
+              <td>
+                <button (click)="updateUtilisateur(utilisateur.userId)">Modifier</button>
+                <button (click)="deleteUtilisateur(utilisateur.userId)">Supprimer</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <h2>Ajouter/Modifier un Utilisateur</h2>
+       <!-- Formulaire pour ajouter ou modifier un utilisateur -->
+        <label>
+          Prénom:
+          <input type="text" [(ngModel)]="utilisateur.usercode" name="usercode">
+        </label>
+        <br>
+        <label>
+          Prénom:
+          <input type="text" [(ngModel)]="utilisateur.firstname" name="firstname">
+        </label>
+        <br>
+        <label>
+          Nom:
+          <input type="text" [(ngModel)]="utilisateur.lastname" name="lastname">
+        </label>
+        <br>
+        <label>
+          Age:
+          <input type="text" [(ngModel)]="utilisateur.emailUser" name="age">
+        </label>
+        <label>
+          Adresse:
+          <input type="text" [(ngModel)]="utilisateur.emailUser" name="adressUser">
+        </label>
+        <label>
+          Telephone:
+          <input type="text" [(ngModel)]="utilisateur.emailUser" name="phone">
+        </label>
+        <label>
+          Email:
+          <input type="text" [(ngModel)]="utilisateur.emailUser" name="email">
+        </label>
+        <label>
+          Mot de passe:
+          <input type="text" [(ngModel)]="utilisateur.emailUser" name="password">
+        </label>
+        <br>
+        <button type="submit">Enregistrer</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+

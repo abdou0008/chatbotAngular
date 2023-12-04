@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ChatbotAngular:build:production"
+              "buildTarget": "ChatbotAngular:build:production"
             },
             "development": {
-              "browserTarget": "ChatbotAngular:build:development"
+              "buildTarget": "ChatbotAngular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ChatbotAngular:build"
+            "buildTarget": "ChatbotAngular:build"
           }
         },
         "test": {
