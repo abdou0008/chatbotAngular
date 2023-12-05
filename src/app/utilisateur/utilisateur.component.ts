@@ -3,12 +3,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { UtilisateurService } from '../utilisateur.service';
 import { Utilisateur } from '../utilisateur';
-import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
-import { MatDialog } from '@angular/material/dialog';
-import { MatTableDataSource, } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { SelectionModel } from '@angular/cdk/collections';
+import { FormsModule } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-utilisateur',

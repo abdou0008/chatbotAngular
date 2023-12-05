@@ -8,7 +8,7 @@ export class Utilisateur {
     phone: String ;
     adressUser : String ;
     age : number ;
-    
+
     constructor() {
         this.userId = 0;
         this.usercode = '';
