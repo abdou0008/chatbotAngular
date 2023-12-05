@@ -7,7 +7,7 @@ export class Utilisateur {
     emailUser : String ;
     phone: String ;
     adressUser : String ;
-    age : Number ;
+    age : number ;
     
     constructor() {
         this.userId = 0;
