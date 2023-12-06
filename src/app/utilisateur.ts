@@ -1,6 +1,6 @@
 export class Utilisateur {
     userId : number;
-    usercode : String ;
+    codeUtilisateur : String ;
     firstname : String ;
     lastname : String ;
     password : String ;
@@ -11,7 +11,7 @@ export class Utilisateur {
 
     constructor() {
         this.userId = 0;
-        this.usercode = '';
+        this.codeUtilisateur = '';
         this.firstname = '';
         this.lastname = '';
         this.password = '';
