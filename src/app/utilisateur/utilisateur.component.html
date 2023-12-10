@@ -1,46 +1,52 @@
-<!-- Affichage de la liste des utilisateurs -->
 <div class="container">
   <div>
     <div>
-      <div>CHATBOT
-      </div>
-    </div>
-    <br><br>
-    <div>
       <form (ngSubmit)="createUtilisateur()">
         <hr>
-        <h2>Ajouter/Modifier un Utilisateur</h2>
+        <h5>Ajouter/Modifier un Utilisateur</h5>
         <!-- Formulaire pour ajouter ou modifier un utilisateur -->
         <table>
           <tr>
-            <div>
-              <td class="">
-                    <input type="text" [(ngModel)]="utilisateur.codeUtilisateur" name="codeUtilisateur" placeholder="codeUtilisateur" >
+            <div class="form-group row">
+              <td class="col">
+                <label for="disabledTextInput">codeUtilisateur</label>
+                <input type="text" class="form-control" [(ngModel)]="utilisateur.codeUtilisateur" name="codeUtilisateur" placeholder="codeUtilisateur" >
               </td>
-              <td class="">
-                  <input type="text" [(ngModel)]="utilisateur.firstname" name="firstname" placeholder="firstname">
+              <td class="col">
+                <label for="disabledTextInput">firstname</label>
+                <input type="text" class="form-control" [(ngModel)]="utilisateur.firstname" name="firstname" placeholder="firstname">
               </td>
-              <td class="">
-                  <input type="text" [(ngModel)]="utilisateur.lastname" name="lastname" placeholder="lastname">
+
+              <td class="col">
+                <label for="disabledTextInput">lastname</label>
+                <input type="text" class="form-control" [(ngModel)]="utilisateur.lastname" name="lastname" placeholder="lastname">
               </td>
-              <td class="">
-                  <input type="number" [(ngModel)]="utilisateur.age" name="age" placeholder="age">
+
+              <td class="col">
+                <label class="mr-sm-2">age</label>
+                <input  type="number" class="form-control" [(ngModel)]="utilisateur.age" name="age" placeholder="age">
               </td>
             </div>
-            <div>
-            <td class="tbl1">
-                <input type="text" [(ngModel)]="utilisateur.adressUser" name="adressUser" placeholder="adresse">
+            <br>
+            <div class="form-group row">
+            <td class="col">
+                <label for="disabledTextInput">adressUser</label>
+                <input type="text" class="form-control" [(ngModel)]="utilisateur.adressUser" name="adressUser" placeholder="adresse">
             </td>
-            <td class="tbl1">
-                <input type="text" [(ngModel)]="utilisateur.phone" name="phone" placeholder="phone">
+            <td class="col">
+                <label for="disabledTextInput">phone</label>
+                <input type="text" class="form-control" [(ngModel)]="utilisateur.phone" name="phone" placeholder="phone">
             </td>
-            <td class="tbl1">
-                <input type="text" [(ngModel)]="utilisateur.emailUser" name="email" placeholder="email">
+            <td class="col">
+                <label for="disabledTextInput">emailUser</label>
+                <input type="text" class="form-control" [(ngModel)]="utilisateur.emailUser" name="email" placeholder="email">
             </td>
-            <td class="tbl1">
-                <input type="text" [(ngModel)]="utilisateur.password" name="password" placeholder="password">
+            <td class="col">
+                <label for="disabledTextInput">password</label>
+                <input type="text" class="form-control" [(ngModel)]="utilisateur.password" name="password" placeholder="password">
             </td>
             </div>
+            <br>
             <div>
               <tr>
                 <td class="content-center">
@@ -50,8 +56,8 @@
             </div>
             <br>
           </tr>
-          <br><br>
-          <h1>Liste des Utilisateurs</h1>
+          <br>
+          <h5>Liste des Utilisateurs</h5>
         </table>
         <table class="table table-striped">
           <thead class="thead-dark">
