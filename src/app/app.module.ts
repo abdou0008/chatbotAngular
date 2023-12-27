@@ -9,21 +9,24 @@ import { AppComponent } from './app.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
+  //{ path: '', redirectTo: '/login', pathMatch: 'full' },
+  //{ path: 'login', component: LoginComponent },
+  //{ path: 'utilisateur', component: UtilisateurComponent },
+  { path: 'contact', component: ContactComponent }
   // ... autres routes de l'application
 ];
 
 @NgModule({
     declarations: [
-     AppComponent,
-     UtilisateurComponent,
-     LoginComponent,
-     NavbarComponent,
-
+        AppComponent,
+        UtilisateurComponent,
+        LoginComponent,
+        ContactComponent,
+        NavbarComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -35,6 +38,7 @@ const routes: Routes = [
         HttpClientModule,
         AppRoutingModule,
         RouterModule.forRoot(routes)
+        
     ]
 })
 export class AppModule { RouterModule: any}

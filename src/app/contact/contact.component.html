@@ -1,0 +1,75 @@
+<div class="container">
+    <div>
+      <div>
+        <form (ngSubmit)="createContact()">
+          <hr>
+          <h5>Ajouter/Modifier un Contact</h5>
+          <!-- Formulaire pour ajouter ou modifier un utilisateur -->
+          <table>
+            <tr>
+              <div class="form-group row">
+                <td class="col">
+                  <label for="disabledTextInput">nom</label>
+                  <input type="text" class="form-control" [(ngModel)]="contact.nomContact" name="nomContact" placeholder="nom" >
+                </td>
+                
+              </div>
+              <br>
+              <div class="form-group row">
+              <td class="col">
+                  <label for="disabledTextInput">adresse</label>
+                  <input type="text" class="form-control" [(ngModel)]="contact.adresseContact" name="adresseContact" placeholder="adresse">
+              </td>
+              <td class="col">
+                  <label for="disabledTextInput">telephone</label>
+                  <input type="text" class="form-control" [(ngModel)]="contact.telephoneContact" name="telephoneContact" placeholder="phone">
+              </td>
+              <td class="col">
+                  <label for="disabledTextInput">email</label>
+                  <input type="text" class="form-control" [(ngModel)]="contact.emailContact" name="emailContact" placeholder="email">
+              </td>
+             
+              </div>
+              <br>
+              <div>
+                <tr>
+                  <td class="content-center">
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                  </td>
+                </tr>
+              </div>
+              <br>
+            </tr>
+            <br>
+            <h5>Liste des Contacts</h5>
+          </table>
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>nomContact</th>
+                <th>adressecontact</th>
+                <th>telephoneContact</th>
+                <th>emailContact</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let contact of contacts">
+                <td>{{ contact.nomContact }}</td>
+                <td>{{ contact.adresseContact }}</td>
+                <td>{{ contact.telephoneContact }}</td>
+                <td>{{ contact.emailContact }}</td>
+                <td>
+                  <button type="button" class="btn btn-success" (click)="updateContact(contact.idContact)">Modifier</button>
+                  <button type="button" class="btn btn-danger" (click)="deleteContact(contact.idContact)">Supprimer</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  
+  
