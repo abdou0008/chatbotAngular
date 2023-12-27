@@ -4,6 +4,7 @@ export class Contact {
     emailContact : String ;
     telephoneContact: String ;
     adresseContact : String ;
+    specialite: String;
 
     constructor() {
         this.idContact = 0;
@@ -11,6 +12,7 @@ export class Contact {
         this.emailContact = '';
         this.telephoneContact = '';
         this.adresseContact = '';
+        this.specialite = '';
     }
 }
 

@@ -12,7 +12,10 @@
                   <label for="disabledTextInput">nom</label>
                   <input type="text" class="form-control" [(ngModel)]="contact.nomContact" name="nomContact" placeholder="nom" >
                 </td>
-                
+                <td class="col">
+                  <label for="disabledTextInput">Specialite</label>
+                  <input type="text" class="form-control" [(ngModel)]="contact.specialite" name="specialite" placeholder="specialite" >
+                </td>
               </div>
               <br>
               <div class="form-group row">
@@ -46,16 +49,18 @@
           <table class="table table-striped">
             <thead class="thead-dark">
               <tr>
-                <th>nomContact</th>
-                <th>adressecontact</th>
-                <th>telephoneContact</th>
-                <th>emailContact</th>
+                <th>nom</th>
+                <th>specialite</th>
+                <th>adresse</th>
+                <th>telephone</th>
+                <th>email</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let contact of contacts">
                 <td>{{ contact.nomContact }}</td>
+                <td>{{ contact.specialite }}</td>
                 <td>{{ contact.adresseContact }}</td>
                 <td>{{ contact.telephoneContact }}</td>
                 <td>{{ contact.emailContact }}</td>
